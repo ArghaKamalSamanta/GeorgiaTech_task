@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if not fa %}
+            <h1>Please be patient. It may take a while!</h1>
+        {% else %}
+            <h1>A BRIEF FUNDAMENTAL ANALYSIS:</h1>
+            <p>{{fa}}</p>
+            <p></p><p></p>
+
+            <form method="POST" action="{{ url_for('new_query_results', fa=fa) }}">
+                <input type="text" name="new_query" placeholder="What else on your mind??" required>
+                <button type="submit">Submit Query</button>
+            </form>
+            {% if response %}
+                <p>Response: {{response}}</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
