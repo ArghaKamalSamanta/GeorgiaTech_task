@@ -10,14 +10,14 @@ def get_FA(ticker):
 
     query = """
             You are given the following data for {ticker} from 1995 to 2023(if available):
-            1. the balance sheet for the company
-            2. the income statement
-            3. the cash flow statement
-            4. the shareholders' equity statement
+            1. the balance sheet for the company(containing AccountsPayableCurrent, Assets, Liabilities, PropertyPlantAndEquipmentNet, CommonStockSharesIssued, etc.)
+            2. the income statement(containing CostOfGoodsAndServicesSold, OperatingExpenses, GrossProfit, WeightedAverageNumberOfDilutedSharesOutstanding, Revenues, etc.)
+            3. the cash flow statement(containing IncomeTaxesPaidNet, NetIncomeLoss, InterestPaid, PaymentsForRepurchaseOfCommonStock, PaymentsOfDividends, etc.)
+            4. the shareholders' equity statement(containing ComprehensiveIncomeNetOfTax, StockholdersEquity, TreasuryStockSharesAcquired, Dividends, etc.)
 
             Go through it once.
-            The trends of these informations over the years can be used to do fundamental analysis for this company.
-            Analyse these files, and keep in mind the analysis and results you have taken out beforehand, and generate a fundamental analysis report  of the company in the following format:
+            The trends of these informations over the years can be used to do a fundamental analysis of this company.
+            Analyze these files, keep in mind the analysis and results you have taken out beforehand, and generate a fundamental analysis report  of the company in the following format:
             1. Company name
             2. About the company in 2 lines.
             3. Display the data and values
@@ -30,7 +30,7 @@ def get_FA(ticker):
 
 
     result = qa_chain(query.format(ticker=ticker))
-    answer = result['query']
+    answer = result['result']
 
     return markdown.markdown(answer) # HTML formatting
 
