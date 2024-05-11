@@ -6,12 +6,15 @@
 
 ## Steps to follow:
 1. Get your SEC EDGAR API key from <a href=https://sec-api.io/>here</a>, and paste it in the  `.env` file.
+   ```.env
+   SEC_API_KEY = "<YOUR_API_KEY>"
+   ```
 2. Clone this repository.
    
    ```
    git clone https://github.com/ArghaKamalSamanta/GeorgiaTech_task.git
    ```
-3. Now, either you can wait for the code to download the model itself, or you can download it manually. To download it manually, visit <a href=https://gpt4all.io/index.html>here</a>, download  `mistral-7b-instruct-v0.1.Q4_0.gguf`,  place it in a subfolder, and name it  `GPT4All_models` .
+3. Now, you can either wait for the code to download the model or download it manually. To download it manually, visit <a href=https://gpt4all.io/index.html>here</a>, download  `mistral-7b-instruct-v0.1.Q4_0.gguf`,  place it in a subfolder, and name it  `GPT4All_models` .
 4. Run  `app.py` .
    ```
    python app.py
