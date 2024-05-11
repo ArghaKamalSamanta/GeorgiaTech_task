@@ -29,7 +29,7 @@
 
 ![Screenshot (909)](https://github.com/ArghaKamalSamanta/GeorgiaTech_task/assets/97786651/4dbf2b34-b36e-4c15-9f6e-7bce8f81c823)
 
----------------------------------
+
 
 *N.B.: The model used is about 3.8 GB in size. Thus, it may take time to generate a response if you don't have a GPU core.*
 
