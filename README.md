@@ -5,7 +5,7 @@
 -------------------------
 
 ## Steps to follow:
-1. Get your SEC EDGAR API key from <a href=https://sec-api.io/>here</a>.
+1. Get your SEC EDGAR API key from <a href=https://sec-api.io/>here</a>, and paste it in the  `.env` file.
 2. Clone this repository.
    
    ```
